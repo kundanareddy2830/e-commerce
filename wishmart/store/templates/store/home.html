@@ -1,0 +1,17 @@
+{% extends 'store/base.html' %}
+{% block title %}Welcome to E-Store{% endblock %}
+{% block hero %}
+<div class="p-5 mb-4 bg-primary text-white rounded-3 shadow-lg hero-section">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">Welcome to E-Store</h1>
+        <p class="lead mb-4">Discover the best products, shop by category, and enjoy a seamless shopping experience.</p>
+        <a href="{% url 'product_list' %}" class="btn btn-light btn-lg"><i class="bi bi-bag"></i> Shop Now</a>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="text-center mt-5">
+    <h2>Browse our latest collections!</h2>
+    <a href="{% url 'product_list' %}" class="btn btn-primary mt-3"><i class="bi bi-arrow-right-circle"></i> View Products</a>
+</div>
+{% endblock %} 

@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+<h2><i class="bi bi-credit-card"></i> Checkout</h2>
+{% if user.is_authenticated %}
+<form method="post" class="animate__animated animate__fadeInUp">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success"><i class="bi bi-bag-check"></i> Place Order</button>
+</form>
+<h4 class="mt-4">Order Summary</h4>
+<ul>
+    {% for item in cart %}
+    <li>{{ item.product.name }} (x{{ item.quantity }}) - ₹{{ item.total_price }}</li>
+    {% endfor %}
+</ul>
+<p><strong>Total: ₹{{ cart.get_total_price }}</strong></p>
+{% else %}
+<div class="alert alert-warning">Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'register' %}">register</a> to checkout.</div>
+{% endif %}
+{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+{% endblock %} 
