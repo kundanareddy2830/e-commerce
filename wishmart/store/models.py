@@ -48,7 +48,19 @@ class Order(models.Model):
         ordering = ('-created',)
 
     def __str__(self):
-        return f'Order {self.id}'
+        # Get the first product name from the order items
+        first_item = self.items.first()
+        if first_item and first_item.product:
+            product_name = first_item.product.name
+            # If there are multiple items, add "and more" or show count
+            item_count = self.items.count()
+            if item_count > 1:
+                return f"{product_name} and {item_count - 1} more items"
+            else:
+                return product_name
+        else:
+            # Fallback to order ID if no items or product
+            return f"Order {self.id}"
 
     def get_total_cost(self):
         return sum(item.get_cost() for item in self.items.all())

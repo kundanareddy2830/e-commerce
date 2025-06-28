@@ -1,0 +1,20 @@
+Welcome to Our Store!
+
+Hello {{ user.username }}!
+
+Welcome to our e-commerce store! We're excited to have you as a member of our community.
+
+Here's what you can do with your new account:
+- Browse our extensive product catalog
+- Save items to your wishlist
+- Track your order history
+- Receive exclusive offers and updates
+- Write product reviews
+
+Start shopping now at our website!
+
+If you have any questions or need assistance, don't hesitate to contact our customer support team.
+
+Happy shopping!
+
+Thank you for joining us! 

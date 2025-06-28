@@ -1,0 +1,28 @@
+Order Confirmation - Order #{{ order.id }}
+
+Dear {{ order.first_name }} {{ order.last_name }},
+
+Thank you for your order. We're processing it now and will ship it soon.
+
+Order Details:
+Order Date: {{ order.created|date:"F j, Y" }}
+Order Number: {{ order.id }}
+
+Shipping Address:
+{{ order.address }}
+{{ order.city }}, {{ order.postal_code }}
+
+Items Ordered:
+{% for item in order_items %}
+- {{ item.product.name }}
+  Quantity: {{ item.quantity }}
+  Price: ${{ item.price }}
+{% endfor %}
+
+Total: ${{ total_cost }}
+
+We'll send you a shipping confirmation email once your order ships.
+
+If you have any questions, please contact our customer service.
+
+Thank you for shopping with us! 
