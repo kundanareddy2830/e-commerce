@@ -13,4 +13,5 @@ django-allauth==0.57.0
 celery==5.3.4
 redis==5.0.1
 django-cors-headers==4.3.1
-dj-database-url==2.1.0 
+dj-database-url==2.1.0
+psycopg2-binary 
