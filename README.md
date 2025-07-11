@@ -56,7 +56,7 @@ A production‑ready, extensible e‑commerce platform built with **Django 4.2*
 | --------- | ---------------------------------------- | --------------------------------------- |
 | Framework | **Django 4.2**                           | Reliable, batteries‑included            |
 | Database  | **SQLite** (dev) → **PostgreSQL** (prod) | Zero‑setup locally, rock‑solid in prod  |
-| Front‑End | HTML • CSS • Alpine.js (optional)        | Simplicity first; swap for React easily |
+| Front‑End | HTML • CSS • JS                          | Simplicity first; swap for React easily |
 | Payments  | **Stripe**                               | PCI compliant, global                   |
 | Deploy    | Gunicorn + Whitenoise on **Render**      | Zero‑Ops container hosting              |
 
