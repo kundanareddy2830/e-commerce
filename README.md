@@ -24,7 +24,8 @@ A production‑ready, extensible e‑commerce platform built with **Django 4.2*
 ---
 
 
-A live demo is available at **[https://wishmart-demo.onrender.com]((https://e-commerce-n5fz.onrender.com))** (read‑only sandbox).
+🔗 **Live Demo:** [https://e-commerce-n5fz.onrender.com](https://e-commerce-n5fz.onrender.com)
+
 
 ---
 
